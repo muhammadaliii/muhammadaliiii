@@ -1,0 +1,309 @@
+body {
+	&.theme-dark {
+		color: $text-dark;
+		background-color: $black;
+
+		&.on-scroll {
+			.header-fix {
+				background-color: rgba(0, 0, 0, 0.6);
+
+				.brand-logo {
+					.logo {
+						background-image: url('../assets/img/logo-white.png');
+					}
+				}
+
+				.header-menu {
+					.menu {
+						a {
+							color: $white;
+						}
+
+						.custom-control-label {
+							color: $white;
+						}
+					}
+				}
+			}
+
+			.toggle-down {
+				.menu-toggle-btn {
+					span {
+						background-color: $white;
+					}
+				}
+			}
+		}
+
+		&.index {
+			&.on-scroll {
+				.header-fix {
+					.brand-logo {
+						.logo {
+							background-image: url('../assets/img/logo-white.png');
+						}
+					}
+
+					.header-menu {
+						.menu {
+							a {
+								@include breakpoint(wide) {
+									color: $white;
+								}
+							}
+
+							.custom-control-label {
+								@include breakpoint(wide) {
+									color: $white;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.header-fix {
+				&.show-menu {
+					.brand-logo {
+						.logo {
+							background-image: url('../assets/img/logo-white.png');
+						}
+					}
+				}
+
+				.brand-logo {
+					.logo {
+						background-image: url('../assets/img/logo-white.png');
+					}
+				}
+			}
+		}
+
+		.toggle-down {
+			&.toggleDrawer {
+				.menu-toggle-btn {
+					span {
+						background: $white;
+					}
+				}
+			}
+
+			.menu-toggle-btn {
+				span {
+					background: $white;
+				}
+			}
+		}
+
+		.header-fix {
+			&.show-menu {
+				background-color: rgba(0, 0, 0, 0.8);
+
+				@include breakpoint(wide) {
+					background-color: transparent;
+				}
+
+				.brand-logo {
+					.logo {
+						background-image: url('../assets/img/logo-white.png');
+					}
+				}
+			}
+
+			.brand-logo {
+				.logo {
+					background-image: url('../assets/img/logo-white.png');
+				}
+			}
+
+			.header-menu {
+				.menu {
+					background-color: rgba(0, 0, 0, 0.8);
+					
+					@include breakpoint(wide) {
+						background-color: transparent;
+					}
+
+					li {
+						border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+						@include breakpoint(wide) {
+							border-bottom: 0;
+						}
+
+						&:first-child {
+							border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+							@include breakpoint(wide) {
+								border-top: 0;
+							}
+						}
+
+						&:last-child {
+							border-bottom: 0;
+						}
+					}
+
+					a {
+						color: $white;
+
+						&:hover {
+							@include breakpoint(desktop) {
+								color: $cta-blue;
+							}
+						}
+					}
+
+					.custom-control-label {
+						color: $white;
+
+						&:hover {
+							@include breakpoint(desktop) {
+								color: $cta-blue;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.work {
+			.box-wrapper {
+				background-color: $black-box;
+			}
+			
+			.desc-content {
+				h5 {
+					color: $white;
+				}
+			}
+		}
+
+		.service {
+			.service-content {
+				background-color: $black-box;
+
+				h5 {
+					color: $white;
+				}
+			}
+
+			.tools {
+				.font-text-medium {
+					color: $white;
+				}
+			}
+
+			.icon {
+				background-color: $black;
+			}
+		}
+
+		.portofolio {
+			.portofolio-area {
+				.box-wrapper {
+					background-color: $black-box;
+				}
+				
+				.desc-content {
+					h5 {
+						color: $white;
+					}
+				}
+			}
+
+			.filter-nav {
+				background-color: rgba(22,22,23,0.8);
+				backdrop-filter: saturate(180%) blur(20px);
+
+				.filter {
+					color: $text-dark;
+
+					&.mixitup-control-active {
+						color: $black;
+						background-color: $white;
+					}
+				}
+			}
+		}
+
+		.title-section {
+			h4 {
+				span {
+					background: linear-gradient(to right, #005e7f, #61b6cd);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+		}
+
+		footer {
+			.footer-nav {
+				.box-wrapper {
+					background: linear-gradient(to right, #005e7f, #61b6cd);
+				}
+			}
+
+			.button {
+				&:focus {
+					color: #005e7f;
+				}
+				
+				&:hover {
+					@include breakpoint(desktop) {
+						color: #005e7f;
+					}
+				}
+			}
+
+			.social-media {
+				.social {
+					a {
+						color: $text-dark;
+						background-color: $black;
+
+						&:hover {
+							@include breakpoint(desktop) {
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.button {
+			&.outline {
+				&.color {
+					background: linear-gradient(to right, #005e7f, #61b6cd);
+			
+					&:before {
+						background-color: $black;
+					}
+
+					span {
+						background: linear-gradient(to right, #005e7f, #61b6cd);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+					}
+
+					&:hover {
+						&:before {
+							@include breakpoint(desktop) {
+								background-color: $transparent;
+							}
+						}
+
+						span {
+							@include breakpoint(desktop) {
+								background: $white;
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
