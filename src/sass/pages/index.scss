@@ -432,6 +432,15 @@ main {
 			@include breakpoint(wide) {
 				min-height: 450px;
 			}
+
+			&.logo-style {
+				background: linear-gradient(to bottom, #343435 0%, #151516 100%);
+
+				@include breakpoint(tablet) {
+					justify-content: center;
+					flex-direction: column;
+				}
+			}
 		}
 
 		.image-content {
@@ -512,6 +521,74 @@ main {
 					bottom: 40px;
 					left: 40px;
 					right: initial;
+				}
+			}
+		}
+
+		.logo-style {
+			.image-content {
+				@include breakpoint(mobile) {
+					margin-top: 25px;
+				}
+
+				@include breakpoint(tablet) {
+					position: relative;
+					transform: none;
+					width: 80%;
+					right: 0;
+				}
+				
+				@include breakpoint(wide) {
+					width: 60%;
+				}
+
+				+ .desc-content {
+					@include breakpoint(mobile) {
+						margin-top: 0;
+					}
+				}
+			}
+
+			.desc-content {
+				@include breakpoint(tablet) {
+					width: 100%;
+				}
+
+				h5 {
+					color: $white;
+					font-size: 1.4em;
+
+					@include breakpoint(tablet) {
+						font-size: 1.6em;
+						text-align: center;
+					}
+					
+					@include breakpoint(wide) {
+						font-size: 1.8em;
+					}
+				}
+			}
+
+			.tag {
+				@include breakpoint(mobile) {
+					position: absolute;
+					top: 30px;
+					bottom: initial;
+					left: 20px;
+					right: initial;
+				}
+
+				li {
+					span {
+						color: $white;
+						border-color: $white;
+					}
+				}
+
+				+ h5 {
+					@include breakpoint(mobile) {
+						margin-top: 0;
+					}
 				}
 			}
 		}

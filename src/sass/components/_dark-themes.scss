@@ -203,6 +203,11 @@ body {
 			.portofolio-area {
 				.box-wrapper {
 					background-color: $black-box;
+
+					&.logo-style {
+						// background: linear-gradient(to bottom, #203025 0%, #264c30 100%);
+						background: linear-gradient(to bottom, #203025 0%, #151516 100%);
+					}
 				}
 				
 				.desc-content {
